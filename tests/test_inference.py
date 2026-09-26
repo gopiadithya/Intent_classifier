@@ -46,5 +46,17 @@ class TestInference(unittest.TestCase):
         self.assertTrue(res_q["is_low_confidence"])
         self.assertIn("weather", res_q["response"])
 
+    def test_location_intent_and_intended_response(self):
+        res = self.service.predict("where is vit vellore located")
+        self.assertEqual(res["raw_intent"], "directions")
+        self.assertGreater(res["confidence"], 0.85)
+        self.assertFalse(res["is_low_confidence"])
+        self.assertEqual(res["response"], "It is located in Andhra Pradesh.")
+
+    def test_other_location_queries(self):
+        res = self.service.predict("where is the taj mahal located")
+        self.assertEqual(res["raw_intent"], "directions")
+        self.assertIn("Agra", res["response"])
+
 if __name__ == "__main__":
     unittest.main()

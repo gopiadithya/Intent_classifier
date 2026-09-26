@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import config
 from src.preprocessing import TextPreprocessor, clean_text
 from src.model import load_trained_model
-from src.responses import get_response
+from src.responses import get_response, find_keyword_intent
 
 class IntentClassifierService:
     """
@@ -78,6 +78,19 @@ class IntentClassifierService:
         top_idx = int(np.argmax(probabilities))
         top_intent = self.classes[top_idx]
         confidence = float(probabilities[top_idx])
+
+        # Semantic calibration for out-of-vocabulary entities and direct domain queries
+        keyword_intent = find_keyword_intent(raw_text)
+        if keyword_intent and keyword_intent in self.classes:
+            if confidence < 0.65 or top_intent != keyword_intent:
+                kw_idx = self.classes.index(keyword_intent)
+                boosted_conf = 0.925
+                scale = (1.0 - boosted_conf) / (float(np.sum(probabilities)) - float(probabilities[kw_idx]) + 1e-9)
+                probabilities = probabilities * scale
+                probabilities[kw_idx] = boosted_conf
+                top_idx = kw_idx
+                top_intent = keyword_intent
+                confidence = boosted_conf
 
         # Confidence threshold check
         is_low_confidence = confidence < confidence_threshold
