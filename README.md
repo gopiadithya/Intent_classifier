@@ -4,7 +4,12 @@
 [![Framework](https://img.shields.io/badge/TensorFlow-2.15+-orange.svg)](https://tensorflow.org/)
 [![UI](https://img.shields.io/badge/Streamlit-1.35+-red.svg)](https://streamlit.io/)
 [![Test Accuracy](https://img.shields.io/badge/Test%20Accuracy-93.70%25-brightgreen.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Live App](https://img.shields.io/badge/Streamlit%20Cloud-Live%20App-success.svg)](https://intentclassifier-chatbot.streamlit.app/)
+[![Author](https://img.shields.io/badge/Author-S.%20GOPI%20ADITHYA%20VARDHAN%20REDDY-blueviolet.svg)]()
+
+**Author**: S. GOPI ADITHYA VARDHAN REDDY  
+**Live Deployed Application**: [https://intentclassifier-chatbot.streamlit.app/](https://intentclassifier-chatbot.streamlit.app/)  
+**Source Code Repository**: [https://github.com/gopiadithya/Intent_classifier](https://github.com/gopiadithya/Intent_classifier)  
 
 An academic Deep Learning and Natural Language Processing project that converts spoken audio into text, processes the utterance using a **Bidirectional Long Short-Term Memory (BiLSTM)** neural network to classify the user's intent, and delivers an appropriate conversational response.
 

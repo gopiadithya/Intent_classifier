@@ -2,7 +2,7 @@
 
 # Voice-Enabled Chatbot Using Speech Recognition and Deep Learning-Based Intent Classification
 
-**Author / Candidate**: S GOPI ADITHYA VARDHAN REDDY
+**Author / Candidate**: S. GOPI ADITHYA VARDHAN REDDY  
 **Department**: Computer Science & Engineering / Artificial Intelligence  
 **Course / Laboratory**: Deep Learning Laboratory Assessment  
 **Evaluation Date**: September 2026  
@@ -350,10 +350,8 @@ This project successfully designed, trained, evaluated, and deployed a voice-ena
 
 ## 22. GitHub Link
 
-* **Source Code Repository**: `https://github.com/gopiadithya/Intent_classifier`  
-*(Placeholder: Update with your GitHub repository link upon pushing)*
+* **Source Code Repository**: [https://github.com/gopiadithya/Intent_classifier](https://github.com/gopiadithya/Intent_classifier)
 
 ## 23. Live Deployment Link
 
-* **Public Web Application**: `https://<your-subdomain>.streamlit.app`  
-*(Placeholder: Update with your Streamlit Community Cloud public URL upon deployment)*
+* **Public Web Application**: [https://intentclassifier-chatbot.streamlit.app/](https://intentclassifier-chatbot.streamlit.app/)

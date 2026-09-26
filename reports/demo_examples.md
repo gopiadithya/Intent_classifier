@@ -1,5 +1,9 @@
 # 🎙️ Voice Demonstration Scenarios for Faculty & Evaluators
 
+**Candidate**: S. GOPI ADITHYA VARDHAN REDDY  
+**Live Deployed App**: [https://intentclassifier-chatbot.streamlit.app/](https://intentclassifier-chatbot.streamlit.app/)  
+**GitHub Repository**: [https://github.com/gopiadithya/Intent_classifier](https://github.com/gopiadithya/Intent_classifier)  
+
 Use these verified test scenarios when demonstrating the project to your professor or lab examiner. Each scenario illustrates the complete operational pipeline:
 $$\text{User Speech} \longrightarrow \text{Recognized Text} \longrightarrow \text{BiLSTM Classification} \longrightarrow \text{Confidence Score} \longrightarrow \text{Chatbot Response}$$
 
