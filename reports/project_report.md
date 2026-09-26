@@ -207,13 +207,14 @@ If $\text{Confidence} < \tau$ (where default threshold $\tau = 0.50$), the syste
 
 ---
 
-## 13. Response Generation
+## 13. Response Generation & Question Answering
 
-The response system maps each predicted intent to an honest, relevant conversational reply:
-* **Intent-to-Response Mapping**: Rather than generating unbounded free-form text via an external generative LLM, the system uses a curated, domain-specific response catalog (`src/responses.py`).
-* **Operational Honesty**: The chatbot strictly avoids fabricating external actions or live data. For example, for banking or device utility requests (such as fund transfers, card freezing, or alarms), the system honestly confirms intent recognition while explicitly clarifying that the academic demo does not execute external real-world transactions or alter hardware configurations.
-* **Varied Natural Responses**: Each intent maps to 3 to 4 distinct variations to prevent monotonous identical outputs.
-* **Low-Confidence Clarification**: If model confidence falls below the configurable threshold ($\tau = 0.50$), the system gracefully invokes a clarification prompt: *"I'm not completely sure I understood that. Could you please rephrase or ask in another way?"*
+The response module operates in coordination with the BiLSTM intent classification model:
+* **Speech Recognition & Deep Learning Separation**: Speech Recognition converts spoken input into text. The BiLSTM deep learning model performs intent/question classification across 18 target classes. The response module then selects a direct, relevant answer corresponding to the predicted intent category.
+* **Direct Question Answering**: Rather than returning generic misunderstandings or unhelpful refusals, the chatbot actively attempts to answer the user's question directly. For queries with reasonable semantic similarity to supported domains (such as location inquiries like *"Where is VIT Vellore located?"* or technical definitions like *"What is Python?"*), the response layer generates a direct, intended answer.
+* **Documented Demonstration Knowledge**: For demonstration purposes, documented domain knowledge mappings (e.g., answering *"Where is VIT Vellore located?"* with *"VIT Vellore is located in Andhra Pradesh."* and technical concepts such as Python, Machine Learning, and Deep Learning) are handled within the response layer. We explicitly clarify that the BiLSTM performs intent classification, rather than claiming the neural network synthesized arbitrary natural language facts.
+* **Operational Honesty**: The chatbot avoids fabricating external actions or live account access. For banking or device utility requests (such as fund transfers, card freezing, or alarms), the system honestly confirms intent recognition while clarifying that the academic prototype does not execute real-world monetary transfers or modify hardware alarms.
+* **Defensive Fallback**: Generic fallback messages are strictly reserved for genuinely unintelligible gibberish (e.g., *"asdfghjkl qwerty"*) or completely unrelated noise.
 
 ---
 

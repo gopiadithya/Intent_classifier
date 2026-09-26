@@ -51,12 +51,22 @@ class TestInference(unittest.TestCase):
         self.assertEqual(res["raw_intent"], "directions")
         self.assertGreater(res["confidence"], 0.85)
         self.assertFalse(res["is_low_confidence"])
-        self.assertEqual(res["response"], "It is located in Andhra Pradesh.")
+        self.assertEqual(res["response"], "VIT Vellore is located in Andhra Pradesh.")
 
     def test_other_location_queries(self):
         res = self.service.predict("where is the taj mahal located")
         self.assertEqual(res["raw_intent"], "directions")
         self.assertIn("Agra", res["response"])
+
+    def test_python_knowledge_query(self):
+        res = self.service.predict("what is python")
+        self.assertEqual(res["raw_intent"], "what_can_i_ask_you")
+        self.assertIn("programming language", res["response"])
+
+    def test_machine_learning_query(self):
+        res = self.service.predict("what is machine learning")
+        self.assertEqual(res["raw_intent"], "what_can_i_ask_you")
+        self.assertIn("learn patterns from data", res["response"])
 
 if __name__ == "__main__":
     unittest.main()

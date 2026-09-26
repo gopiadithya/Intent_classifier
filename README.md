@@ -14,13 +14,13 @@ An academic Deep Learning and Natural Language Processing project that converts 
 
 Modern voice conversational systems bridge spoken language interaction and digital automated services. This project implements an explainable, end-to-end intent-classification pipeline:
 
-1. **Voice Capture**: Ingests user speech in real-time through the web browser microphone.
+1. **Voice Capture**: Ingests user speech in real-time through the web browser microphone with silence auto-submit.
 2. **Speech Recognition**: Transcribes spoken audio waveforms into normalized text using Google Speech Recognition.
 3. **NLP Preprocessing**: Tokenizes utterances and applies sequence padding.
-4. **Deep Learning Classification**: Employs an **Embedding + Bidirectional LSTM** network to capture temporal and bidirectional contextual word patterns.
-5. **Confidence & Threshold Gating**: Evaluates softmax class probabilities against a configurable threshold ($\tau = 0.50$) to guard against uncertain predictions and out-of-scope inputs.
-6. **Response Generation**: Selects an honest, intent-relevant conversational response from a domain-specific catalog without pretending to execute external real-world actions or access live data.
-7. **Streamlit Interactive UI**: An academic interface displaying the voice input status, recognized speech, detected intent, model confidence score, and deep learning softmax probability breakdown.
+4. **Deep Learning Classification**: Employs an **Embedding + Bidirectional LSTM** neural network to classify the recognized text into one of 18 intent categories.
+5. **Confidence & Semantic Evaluation**: Evaluates softmax class probabilities and semantic keyword evidence to ensure reliable classification.
+6. **Intent-Relevant Response Module**: Rather than returning generic misunderstandings or ungrounded generative LLM hallucinations, the response layer selects a direct, semantically intended answer corresponding to the predicted intent category (including documented demonstration knowledge mappings for questions like VIT Vellore, Python, and Machine Learning).
+7. **Streamlit Interactive UI**: An academic interface displaying the voice input, recognized speech, detected intent, model confidence score, and conversational response.
 
 ---
 
@@ -56,13 +56,13 @@ Modern voice conversational systems bridge spoken language interaction and digit
                            ▼
             🎯 PREDICTED INTENT & CONFIDENCE
                            │
-                  Confidence ≥ 0.50 ?
+                  Semantic / Topic Match?
                      /           \
-                 YES              NO (Low Confidence)
+                 YES              NO (Unintelligible Gibberish)
                  /                  \
                 ▼                    ▼
      [ 4. Response Mapping ]     [ Fallback Handler ]
-    (Randomized Relevant Bank)   ("Could you please rephrase?")
+   (Direct & Intended Answers)  (Domain Capability Guide)
                 \                    /
                  ▼                  ▼
              💬 CHATBOT CONVERSATIONAL RESPONSE
