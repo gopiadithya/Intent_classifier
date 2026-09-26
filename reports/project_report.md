@@ -2,7 +2,7 @@
 
 # Voice-Enabled Chatbot Using Speech Recognition and Deep Learning-Based Intent Classification
 
-**Author / Candidate**: Academic Student  
+**Author / Candidate**: S GOPI ADITHYA VARDHAN REDDY
 **Department**: Computer Science & Engineering / Artificial Intelligence  
 **Course / Laboratory**: Deep Learning Laboratory Assessment  
 **Evaluation Date**: September 2026  
