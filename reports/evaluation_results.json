@@ -1,0 +1,258 @@
+{
+    "test_samples": 540,
+    "accuracy": 0.937037037037037,
+    "macro_precision": 0.9393323053851592,
+    "macro_recall": 0.9370370370370371,
+    "macro_f1": 0.9371278175315612,
+    "weighted_f1": 0.9371278175315612,
+    "mean_confidence": 0.9641282558441162,
+    "correct_count": 506,
+    "misclassified_count": 34,
+    "sample_misclassified": [
+        {
+            "text": "i would like to distribute some money between my accounts",
+            "true_intent": "transfer",
+            "predicted_intent": "balance",
+            "confidence": 0.6257131695747375
+        },
+        {
+            "text": "repeat what the weather will be like",
+            "true_intent": "transfer",
+            "predicted_intent": "weather",
+            "confidence": 0.9999512434005737
+        },
+        {
+            "text": "what are my coffers at",
+            "true_intent": "balance",
+            "predicted_intent": "reminder",
+            "confidence": 0.3749760091304779
+        },
+        {
+            "text": "whats my bank accounts look like",
+            "true_intent": "balance",
+            "predicted_intent": "freeze_account",
+            "confidence": 0.675946831703186
+        },
+        {
+            "text": "how much does my bank account have",
+            "true_intent": "balance",
+            "predicted_intent": "freeze_account",
+            "confidence": 0.5143271684646606
+        },
+        {
+            "text": "where can i get some good food",
+            "true_intent": "restaurant_suggestion",
+            "predicted_intent": "travel_suggestion",
+            "confidence": 0.6713277697563171
+        },
+        {
+            "text": "what's the food can easily get in canada",
+            "true_intent": "restaurant_suggestion",
+            "predicted_intent": "travel_suggestion",
+            "confidence": 0.8922622203826904
+        },
+        {
+            "text": "where can i satisfy my craving for french food in milwaukee",
+            "true_intent": "restaurant_suggestion",
+            "predicted_intent": "travel_suggestion",
+            "confidence": 0.641301691532135
+        },
+        {
+            "text": "i want to pay my electric bill, can you do it for me",
+            "true_intent": "pay_bill",
+            "predicted_intent": "what_can_i_ask_you",
+            "confidence": 0.9955780506134033
+        },
+        {
+            "text": "have i gone over my entertainment budget",
+            "true_intent": "spending_history",
+            "predicted_intent": "reminder",
+            "confidence": 0.45002248883247375
+        }
+    ],
+    "sample_correct": [
+        {
+            "text": "can you please provide me with assistance in moving money from one account to another",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.638994574546814
+        },
+        {
+            "text": "i would like help moving money between accounts",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.996437668800354
+        },
+        {
+            "text": "can you assist me in moving money from one account to another",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.7913290858268738
+        },
+        {
+            "text": "i would like help moving money from one account to another",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.9913440942764282
+        },
+        {
+            "text": "i would like assistance moving money from one account to another",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.999077558517456
+        },
+        {
+            "text": "can i move some money around",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.7663794755935669
+        },
+        {
+            "text": "can i make a transfer between my accounts",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.9972097277641296
+        },
+        {
+            "text": "i need to make a transfer of my money",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.9996870756149292
+        },
+        {
+            "text": "can i move some money between my two accounts",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.9971068501472473
+        },
+        {
+            "text": "i would like to transfer $100 from my checking to saving account",
+            "true_intent": "transfer",
+            "predicted_intent": "transfer",
+            "confidence": 0.9999847412109375
+        }
+    ],
+    "classification_report": {
+        "alarm": {
+            "precision": 1.0,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.9830508474576272,
+            "support": 30.0
+        },
+        "balance": {
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1-score": 0.9,
+            "support": 30.0
+        },
+        "book_hotel": {
+            "precision": 0.9666666666666667,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.9666666666666667,
+            "support": 30.0
+        },
+        "calendar": {
+            "precision": 0.875,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.9032258064516129,
+            "support": 30.0
+        },
+        "directions": {
+            "precision": 1.0,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.9655172413793104,
+            "support": 30.0
+        },
+        "freeze_account": {
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1-score": 0.967741935483871,
+            "support": 30.0
+        },
+        "goodbye": {
+            "precision": 0.9629629629629629,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.9122807017543859,
+            "support": 30.0
+        },
+        "greeting": {
+            "precision": 0.90625,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.9354838709677419,
+            "support": 30.0
+        },
+        "pay_bill": {
+            "precision": 1.0,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.9830508474576272,
+            "support": 30.0
+        },
+        "reminder": {
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8333333333333334,
+            "support": 30.0
+        },
+        "restaurant_suggestion": {
+            "precision": 0.9310344827586207,
+            "recall": 0.9,
+            "f1-score": 0.9152542372881356,
+            "support": 30.0
+        },
+        "spending_history": {
+            "precision": 0.9615384615384616,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8928571428571429,
+            "support": 30.0
+        },
+        "tell_joke": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 30.0
+        },
+        "thank_you": {
+            "precision": 0.9333333333333333,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.9333333333333333,
+            "support": 30.0
+        },
+        "transfer": {
+            "precision": 1.0,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.9655172413793104,
+            "support": 30.0
+        },
+        "travel_suggestion": {
+            "precision": 0.8235294117647058,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.875,
+            "support": 30.0
+        },
+        "weather": {
+            "precision": 0.967741935483871,
+            "recall": 1.0,
+            "f1-score": 0.9836065573770492,
+            "support": 30.0
+        },
+        "what_can_i_ask_you": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1-score": 0.9523809523809523,
+            "support": 30.0
+        },
+        "accuracy": 0.937037037037037,
+        "macro avg": {
+            "precision": 0.9393323053851592,
+            "recall": 0.9370370370370371,
+            "f1-score": 0.9371278175315612,
+            "support": 540.0
+        },
+        "weighted avg": {
+            "precision": 0.9393323053851591,
+            "recall": 0.937037037037037,
+            "f1-score": 0.9371278175315612,
+            "support": 540.0
+        }
+    }
+}

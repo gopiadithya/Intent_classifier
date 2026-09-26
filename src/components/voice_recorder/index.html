@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  body {
+    background: transparent;
+    padding: 8px 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .recorder-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 50px;
+    padding: 6px 16px 6px 8px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .recorder-bar:hover {
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.12);
+  }
+  .recorder-bar.active {
+    border-color: #ef4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.25);
+    background: rgba(239, 68, 68, 0.05);
+  }
+  .mic-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    position: relative;
+  }
+  .mic-btn.idle {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.35);
+  }
+  .mic-btn.idle:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.5);
+  }
+  .mic-btn.recording {
+    background: #ef4444;
+    color: #ffffff;
+    animation: glow-pulse 1.4s infinite;
+  }
+  .mic-btn.processing {
+    background: #64748b;
+    color: #ffffff;
+    cursor: wait;
+  }
+  @keyframes glow-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+      transform: scale(1.05);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+      transform: scale(1);
+    }
+  }
+  .mic-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+  }
+  .status-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .status-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    transition: color 0.2s;
+  }
+  /* In light themes, fall back gracefully */
+  @media (prefers-color-scheme: light) {
+    .status-title { color: #1e293b; }
+    .status-sub { color: #64748b; }
+  }
+  .status-sub {
+    font-size: 0.76rem;
+    color: #94a3b8;
+  }
+  .visualizer {
+    display: none;
+    align-items: center;
+    gap: 3px;
+    height: 24px;
+    margin-left: 6px;
+  }
+  .visualizer.active {
+    display: flex;
+  }
+  .v-bar {
+    width: 3.5px;
+    height: 6px;
+    background: #ef4444;
+    border-radius: 3px;
+    transition: height 0.08s ease;
+  }
+  .cancel-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    margin-left: 4px;
+    transition: all 0.2s;
+  }
+  .cancel-btn:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+  }
+  .cancel-btn.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="recorder-bar" id="recorderBar">
+  <button id="micBtn" class="mic-btn idle" onclick="toggleRecording()" title="Click to speak">
+    <svg id="micIcon" viewBox="0 0 24 24">
+      <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+      <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+    </svg>
+  </button>
+
+  <div class="status-wrap">
+    <span id="statusTitle" class="status-title">Click to Speak</span>
+    <span id="statusSub" class="status-sub">Auto-submits when you stop speaking</span>
+  </div>
+
+  <div id="visualizer" class="visualizer">
+    <div class="v-bar" id="vb1"></div>
+    <div class="v-bar" id="vb2"></div>
+    <div class="v-bar" id="vb3"></div>
+    <div class="v-bar" id="vb4"></div>
+  </div>
+
+  <button id="cancelBtn" class="cancel-btn" onclick="stopAndSubmit()" title="Stop now">
+    <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24">
+      <rect x="6" y="6" width="12" height="12" rx="2"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+function sendToStreamlit(data) {
+  window.parent.postMessage({
+    isStreamlitMessage: true,
+    type: "streamlit:setComponentValue",
+    value: data
+  }, "*");
+}
+
+function updateFrameHeight() {
+  const height = document.body.scrollHeight || 65;
+  window.parent.postMessage({
+    isStreamlitMessage: true,
+    type: "streamlit:setFrameHeight",
+    height: Math.max(height, 60)
+  }, "*");
+}
+
+window.parent.postMessage({
+  isStreamlitMessage: true,
+  type: "streamlit:componentReady",
+  apiVersion: 1
+}, "*");
+
+setTimeout(updateFrameHeight, 50);
+
+let audioContext = null;
+let mediaStream = null;
+let scriptProcessor = null;
+let analyser = null;
+let isRecording = false;
+let speechDetected = false;
+let silenceStart = null;
+let pcmBuffers = [];
+let totalSamples = 0;
+let animationFrameId = null;
+let maxTimeout = null;
+
+const SILENCE_THRESHOLD = 14;
+const SILENCE_DURATION_MS = 1250;
+const MAX_RECORD_MS = 12000;
+
+function toggleRecording() {
+  if (isRecording) {
+    stopAndSubmit();
+  } else {
+    startRecording();
+  }
+}
+
+async function startRecording() {
+  try {
+    mediaStream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        channelCount: 1,
+        echoCancellation: true,
+        noiseSuppression: true,
+        autoGainControl: true
+      }
+    });
+
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioContext.createMediaStreamSource(mediaStream);
+
+    analyser = audioContext.createAnalyser();
+    analyser.fftSize = 256;
+    analyser.smoothingTimeConstant = 0.3;
+
+    scriptProcessor = audioContext.createScriptProcessor(4096, 1, 1);
+
+    pcmBuffers = [];
+    totalSamples = 0;
+    speechDetected = false;
+    silenceStart = null;
+    isRecording = true;
+
+    scriptProcessor.onaudioprocess = function(e) {
+      if (!isRecording) return;
+      const channelData = e.inputBuffer.getChannelData(0);
+      pcmBuffers.push(new Float32Array(channelData));
+      totalSamples += channelData.length;
+    };
+
+    source.connect(analyser);
+    analyser.connect(scriptProcessor);
+    scriptProcessor.connect(audioContext.destination);
+
+    // Update UI
+    document.getElementById("recorderBar").classList.add("active");
+    const btn = document.getElementById("micBtn");
+    btn.className = "mic-btn recording";
+    document.getElementById("statusTitle").textContent = "Listening...";
+    document.getElementById("statusTitle").style.color = "#ef4444";
+    document.getElementById("statusSub").textContent = "Speak your query now";
+    document.getElementById("visualizer").classList.add("active");
+    document.getElementById("cancelBtn").classList.add("active");
+    updateFrameHeight();
+
+    monitorVoice();
+
+    maxTimeout = setTimeout(() => {
+      if (isRecording) stopAndSubmit();
+    }, MAX_RECORD_MS);
+
+  } catch (err) {
+    console.error("Microphone error:", err);
+    alert("Microphone access error: " + err.message);
+    resetUI();
+  }
+}
+
+function monitorVoice() {
+  if (!isRecording) return;
+
+  const dataArray = new Uint8Array(analyser.frequencyBinCount);
+  analyser.getByteFrequencyData(dataArray);
+
+  let sum = 0;
+  for (let i = 0; i < dataArray.length; i++) {
+    sum += dataArray[i];
+  }
+  const avg = sum / dataArray.length;
+
+  // Animate waveform
+  const b1 = Math.min(22, Math.max(4, (dataArray[2] || 0) / 6));
+  const b2 = Math.min(22, Math.max(4, (dataArray[6] || 0) / 5));
+  const b3 = Math.min(22, Math.max(4, (dataArray[12] || 0) / 5));
+  const b4 = Math.min(22, Math.max(4, (dataArray[18] || 0) / 6));
+  document.getElementById("vb1").style.height = b1 + "px";
+  document.getElementById("vb2").style.height = b2 + "px";
+  document.getElementById("vb3").style.height = b3 + "px";
+  document.getElementById("vb4").style.height = b4 + "px";
+
+  // VAD logic
+  if (avg > SILENCE_THRESHOLD) {
+    speechDetected = true;
+    silenceStart = null;
+    document.getElementById("statusTitle").textContent = "Listening...";
+    document.getElementById("statusTitle").style.color = "#10b981";
+    document.getElementById("statusSub").textContent = "Voice active";
+  } else if (speechDetected) {
+    if (silenceStart === null) {
+      silenceStart = Date.now();
+    } else if (Date.now() - silenceStart >= SILENCE_DURATION_MS) {
+      stopAndSubmit();
+      return;
+    } else {
+      document.getElementById("statusTitle").textContent = "Finishing...";
+      document.getElementById("statusTitle").style.color = "#f59e0b";
+      document.getElementById("statusSub").textContent = "Submitting audio";
+    }
+  }
+
+  animationFrameId = requestAnimationFrame(monitorVoice);
+}
+
+function stopAndSubmit() {
+  if (!isRecording) return;
+  isRecording = false;
+
+  if (animationFrameId) cancelAnimationFrame(animationFrameId);
+  if (maxTimeout) clearTimeout(maxTimeout);
+
+  if (mediaStream) {
+    mediaStream.getTracks().forEach(t => t.stop());
+  }
+
+  document.getElementById("recorderBar").classList.remove("active");
+  const btn = document.getElementById("micBtn");
+  btn.className = "mic-btn processing";
+  document.getElementById("statusTitle").textContent = "Processing...";
+  document.getElementById("statusTitle").style.color = "#3b82f6";
+  document.getElementById("statusSub").textContent = "Transcribing speech";
+  document.getElementById("visualizer").classList.remove("active");
+  document.getElementById("cancelBtn").classList.remove("active");
+
+  const sampleRate = audioContext ? audioContext.sampleRate : 16000;
+  const mergedPcm = new Float32Array(totalSamples);
+  let offset = 0;
+  for (let i = 0; i < pcmBuffers.length; i++) {
+    mergedPcm.set(pcmBuffers[i], offset);
+    offset += pcmBuffers[i].length;
+  }
+
+  if (audioContext && audioContext.state !== 'closed') {
+    audioContext.close();
+  }
+
+  const wavBytes = encodeWav(mergedPcm, sampleRate);
+  const base64Data = arrayBufferToBase64(wavBytes);
+
+  sendToStreamlit({
+    id: Date.now(),
+    audio_base64: base64Data,
+    sample_rate: sampleRate,
+    sample_width: 2,
+    format: "wav"
+  });
+
+  setTimeout(resetUI, 1000);
+}
+
+function resetUI() {
+  document.getElementById("recorderBar").classList.remove("active");
+  const btn = document.getElementById("micBtn");
+  btn.className = "mic-btn idle";
+  document.getElementById("statusTitle").textContent = "Click to Speak";
+  document.getElementById("statusTitle").style.color = "";
+  document.getElementById("statusSub").textContent = "Auto-submits when you stop speaking";
+  document.getElementById("visualizer").classList.remove("active");
+  document.getElementById("cancelBtn").classList.remove("active");
+  updateFrameHeight();
+}
+
+function encodeWav(samples, sampleRate) {
+  const buffer = new ArrayBuffer(44 + samples.length * 2);
+  const view = new DataView(buffer);
+
+  function writeString(offset, str) {
+    for (let i = 0; i < str.length; i++) {
+      view.setUint8(offset + i, str.charCodeAt(i));
+    }
+  }
+
+  writeString(0, 'RIFF');
+  view.setUint32(4, 36 + samples.length * 2, true);
+  writeString(8, 'WAVE');
+  writeString(12, 'fmt ');
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, 1, true);
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, sampleRate * 2, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  writeString(36, 'data');
+  view.setUint32(40, samples.length * 2, true);
+
+  let offset = 44;
+  for (let i = 0; i < samples.length; i++, offset += 2) {
+    const s = Math.max(-1, Math.min(1, samples[i]));
+    view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+  }
+
+  return buffer;
+}
+
+function arrayBufferToBase64(buffer) {
+  let binary = '';
+  const bytes = new Uint8Array(buffer);
+  const len = bytes.byteLength;
+  for (let i = 0; i < len; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return window.btoa(binary);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,541 @@
+text,intent,word_count
+can you please provide me with assistance in moving money from one account to another,transfer,15
+i would like help moving money between accounts,transfer,8
+can you assist me in moving money from one account to another,transfer,12
+i would like help moving money from one account to another,transfer,11
+i would like assistance moving money from one account to another,transfer,11
+can i move some money around,transfer,6
+can i make a transfer between my accounts,transfer,8
+i need to make a transfer of my money,transfer,9
+can i move some money between my two accounts,transfer,9
+i would like to distribute some money between my accounts,transfer,10
+i would like to transfer $100 from my checking to saving account,transfer,12
+help me transfer $100 from my checking to saving account,transfer,10
+transfer $100 from my checking to saving account,transfer,8
+can you please help me move $100 from my checking to saving account,transfer,13
+please move $100 from my checking to saving account,transfer,9
+"transfer seventeen dollars from rbs to woodforest account, please",transfer,9
+"send twelve dollars between cabelas and bank of london accounts, please",transfer,11
+"transfer ninety dollars between glacier checking and farmers accounts, please",transfer,10
+transfer seventy dollars between national and citizens accounts,transfer,8
+transfer four and sixty seven dollars from bank of oklahoma checking to security bank account,transfer,15
+how much money can i transfer today,transfer,7
+add funds to the retirement account from the pnc account only,transfer,11
+would you move 100 dollars from the checking and put it into savings,transfer,13
+repeat what the weather will be like,transfer,7
+i would like to put 100 dollars from the checking into the savings account now,transfer,15
+please transfer $5000 to money market from checking account,transfer,9
+i need $360 transfered from savings to checking account,transfer,9
+make an immediate transfer of ten thousand from money market to checking,transfer,12
+i'd like to transfer $400 from household to savings account,transfer,10
+transer $800 from my checking to savings account,transfer,8
+can you tell me what you can help with,what_can_i_ask_you,9
+what things are you able to help me with,what_can_i_ask_you,9
+i would like to know what you can help with,what_can_i_ask_you,10
+what kind of things can you help with,what_can_i_ask_you,8
+i want to know what type of things you can help me with,what_can_i_ask_you,13
+please help me to know what type of things you can help me with,what_can_i_ask_you,14
+can i know what type of things you can help me with,what_can_i_ask_you,12
+i would like to know what type of things you can help me with,what_can_i_ask_you,14
+i will be glad to know what type of things you can help me with,what_can_i_ask_you,15
+what subjects do you like,what_can_i_ask_you,5
+tell me what subjects you like,what_can_i_ask_you,6
+please tell me what subjects you like,what_can_i_ask_you,7
+so what subjects do you like,what_can_i_ask_you,6
+what type of questions can i ask you,what_can_i_ask_you,8
+what kinds of things are you familiar with,what_can_i_ask_you,8
+what subjects are you experienced in,what_can_i_ask_you,6
+what knowledge do you have on certain subjects,what_can_i_ask_you,8
+what kid of subjects do you excel in,what_can_i_ask_you,8
+what subjects or areas are you familiar with,what_can_i_ask_you,8
+which subjects are you the most experienced with,what_can_i_ask_you,8
+tell me what you can do for me,what_can_i_ask_you,8
+what sorts of tasks can you do,what_can_i_ask_you,7
+what can you do for me,what_can_i_ask_you,6
+what can you do to make yourself useful,what_can_i_ask_you,8
+what would you be able to do with me,what_can_i_ask_you,9
+give me examples of what to ask you,what_can_i_ask_you,8
+tell me what types of questions i can ask you,what_can_i_ask_you,10
+what are you programmed to do for me,what_can_i_ask_you,8
+what things do you know how to do,what_can_i_ask_you,8
+how can you help me,what_can_i_ask_you,5
+what are my coffers at,balance,5
+tell me the current balance of my bank accounts,balance,9
+what's my current bank account total,balance,6
+how much do i have in my bank accounts,balance,9
+what's the balance in my bank accounts,balance,7
+what do i have in my bank accounts right now,balance,10
+is there enough in my wells fargo account to buy some nike's,balance,12
+do i have enough in my wells fargo account to get some nike's,balance,13
+do i have money in my wells fargo account for nike's,balance,11
+"i want some nike's, is there enough in my wells fargo account",balance,12
+check my wells fargo account to see if i have enough for these nike's,balance,14
+would you tell me my bank balance,balance,7
+can you tell me my bank balance,balance,7
+will you let me know my bank balance,balance,8
+will you tell me my bank balance,balance,7
+how much money is there in my bank accounts,balance,9
+how much money do i have in my various bank accounts,balance,11
+how much cash do i have in my various bank accounts,balance,11
+how much cash do i have in my bank accounts,balance,10
+how much dough do i have in my bank accounts,balance,10
+whats the combined total of the money inside my bank accounts,balance,11
+whats my bank accounts look like,balance,6
+how much moola is in my bank accounts,balance,8
+what the numerical number inside my bank accounts,balance,8
+how much does my bank account have,balance,7
+tell me the current account balance,balance,6
+check my checking balance,balance,4
+how much do i have left in my checking account,balance,10
+what's my checking look like,balance,5
+how much do i have in my savings account,balance,9
+can you freeze my bank account,freeze_account,6
+i want to freeze my bank account,freeze_account,7
+i want my account locked out,freeze_account,6
+stop all access to my account,freeze_account,6
+i need my account frozen!,freeze_account,5
+i need to lock my account right now!,freeze_account,8
+please force my account to freeze,freeze_account,6
+please stop my account,freeze_account,4
+please allow my account to freeze,freeze_account,6
+please put my account on hold,freeze_account,6
+freeze my account at the bank immediately,freeze_account,7
+would you be able to freeze my bank account,freeze_account,9
+my account at the bank needs to be frozen,freeze_account,9
+please block my discover account immediately,freeze_account,6
+please put a block on my citi account immediately,freeze_account,9
+block my american saving bank for now,freeze_account,7
+block my bank of america immdediately,freeze_account,6
+put a block on bank of amerian immediately,freeze_account,8
+my account needs to be frozen,freeze_account,6
+freeze my account for me,freeze_account,5
+put a freeze on my account,freeze_account,6
+could you please put a stop on my bank account,freeze_account,10
+i need to put a stop on my bank account,freeze_account,10
+are you able to put a stop on my bank account,freeze_account,11
+please put a stop on my bank account,freeze_account,8
+i am hoping you can put a stop on my bank account,freeze_account,12
+please put a freeze on my banking account,freeze_account,8
+i need my bank account frozen,freeze_account,6
+how do i freeze my bank account,freeze_account,7
+would you freeze my bank account,freeze_account,6
+please give me the name of a few good options for places to eat dinner tonight,restaurant_suggestion,16
+i need some suggestions for dinner places tonight,restaurant_suggestion,8
+what are some good places to go out for dinner in my area tonight,restaurant_suggestion,14
+show me some restaurants that have high reviews for eating out,restaurant_suggestion,11
+can you search recommended casual restaurants for tonight in philadelphia,restaurant_suggestion,10
+where can i go to eat,restaurant_suggestion,6
+where can i get some good food,restaurant_suggestion,7
+"in cleveland, are there any good places that serve clams",restaurant_suggestion,10
+does cleveland have any good places that serve clams,restaurant_suggestion,9
+can you find any good places in cleveland that serve clams,restaurant_suggestion,11
+are there good clam places in cleveland,restaurant_suggestion,7
+are there any good places in cleveland that serve clams,restaurant_suggestion,10
+"could you suggest a french restaurant, please",restaurant_suggestion,7
+can you suggest a french restaurant,restaurant_suggestion,6
+can you suggest a thai restaurant,restaurant_suggestion,6
+"can you suggest a french restaurant, please",restaurant_suggestion,7
+"can you suggest a thai restaurant, please",restaurant_suggestion,7
+are there are any good places in washington that serve cheese pizza,restaurant_suggestion,12
+what's the food can easily get in canada,restaurant_suggestion,8
+what are the best places to get shrimp in chicago,restaurant_suggestion,10
+what are the best restaurants open tonight,restaurant_suggestion,7
+i need a list of good places to eat near me,restaurant_suggestion,11
+pull up some recommendations for places serving fish in maine,restaurant_suggestion,10
+where should i go for food tonight,restaurant_suggestion,7
+where should i eat,restaurant_suggestion,4
+any fantastic restaurants to get shrimp at in atlanta,restaurant_suggestion,9
+give me a list of places that serve the best wings in charlotte,restaurant_suggestion,13
+i need reviews for places serving tacos in chicago,restaurant_suggestion,9
+give me restaurant reccomendations,restaurant_suggestion,4
+where can i satisfy my craving for french food in milwaukee,restaurant_suggestion,11
+i have a car payment that needs to be paid,pay_bill,10
+i need to put in a payment towards my phone bill,pay_bill,11
+help me get my gas bill paid,pay_bill,7
+pay my con edison bill using my capital one account,pay_bill,10
+"use my navy federal account and pay this month's verizon bill, please",pay_bill,12
+please pay my sprint bill using my bank of america checking account,pay_bill,12
+i need some assistance paying my utilities bill,pay_bill,8
+i need a hand getting this gas bill paid,pay_bill,9
+can you help me pay my electricity bill,pay_bill,8
+i have to pay my water bill but need help doing it,pay_bill,12
+i am going to need help paying my rent bill,pay_bill,10
+i want to pay my bill,pay_bill,6
+can you help me pay my bill,pay_bill,7
+i want to pay my bill through the app,pay_bill,9
+pay my electric bill for me,pay_bill,6
+"pull up my electric bill, i want to pay it",pay_bill,10
+how do i pay my electric bill,pay_bill,7
+"i want to pay my electric bill, can you do it for me",pay_bill,13
+pay my light bill,pay_bill,4
+pay my utility bill from my bank account,pay_bill,8
+charge my internet bill to the corporate account,pay_bill,8
+pay my gas bill with my checking account,pay_bill,8
+i need to pay my electric bill,pay_bill,7
+i know i should pay my electric bill,pay_bill,8
+"today my electric bill will be paid, or should be",pay_bill,10
+today is the day i should pay my electric bill,pay_bill,10
+my electric bill should be paid today,pay_bill,7
+i need to pay my visa,pay_bill,6
+pay $175 on my visa,pay_bill,5
+i'd like to pay $4735 to my water bill,pay_bill,9
+what's the total i've spent on shoes this month,spending_history,9
+how many dollars have i spent on coffee this month,spending_history,10
+what have i spent on food this month,spending_history,8
+how much have i spent on tires this month,spending_history,9
+how much have i been spending on booze this month,spending_history,10
+what have i spent on fast food recently,spending_history,8
+how much total have i spent on fast food lately,spending_history,10
+how much fast food have i bought recently,spending_history,8
+check how much i spent this week,spending_history,7
+how much money have i spent on fast food lately,spending_history,10
+how much money have a spent in the last week,spending_history,10
+how much money did i spend this weekend,spending_history,8
+tell me how much money i've spent on fast food in the past week,spending_history,14
+what is the total amount i spent last week,spending_history,9
+what've i spent on gas this month,spending_history,7
+have i gone over my entertainment budget,spending_history,7
+would you say i've spent too much money on chips as of late,spending_history,13
+"looking at this week only, have i overspent on hoagies",spending_history,10
+do i overspend when it comes to fast food,spending_history,9
+"looking at the past month, what did i spend total",spending_history,10
+have i gone over my chocolate budget lately,spending_history,8
+how much have i spent this week,spending_history,7
+about how much did i spend recently,spending_history,7
+tell me how much i have been buying as of late,spending_history,11
+what did i spend on beer last month,spending_history,8
+did i stick to my dinner budget,spending_history,7
+how much have i spent on video games recently,spending_history,9
+do i spend too much on beer,spending_history,7
+what are my finances like lately,spending_history,6
+how much money have i spent recently,spending_history,7
+what are some interesting things i can do while in raleigh,travel_suggestion,11
+can you help me pick some fun things to do in london during my trip,travel_suggestion,15
+"help me plan my traveling itinerary for my trip to madrid, i want to see lots of sights!",travel_suggestion,18
+help me pick a new location to travel to,travel_suggestion,9
+can you do some research about the best places to travel,travel_suggestion,11
+tell me some fun activities to do in oklahoma city,travel_suggestion,10
+what are some popular tourist activities in mexico city,travel_suggestion,9
+i am itching to travel but don't know where to go,travel_suggestion,11
+give me some recommendations of good tourist attractions in montreal,travel_suggestion,10
+tell me some fun tourist attractions in london,travel_suggestion,8
+give me some ideas of what to do during my trip to dallas,travel_suggestion,13
+find out the best tourist attractions to visit in moscow,travel_suggestion,10
+i want some suggestions for tourist activities in dublin,travel_suggestion,9
+i am traveling to paris soon and would like some suggestions of what to do and see,travel_suggestion,17
+what are some local attractions in portland,travel_suggestion,7
+what sorts of activities should i get up to while i am in dublin,travel_suggestion,14
+i want to explore a new place but don't know where i should go do you have any ideas,travel_suggestion,19
+please give me some ideas of fun tourist activities to do while i am in paris,travel_suggestion,16
+can you throw out some suggestions to me of places to travel to,travel_suggestion,13
+suggest some things for me to do while i am in los angeles,travel_suggestion,13
+let me know some things to do in phoenix,travel_suggestion,9
+let me know some things i can do in dallas,travel_suggestion,10
+i wanna know some things to do in phoenix,travel_suggestion,9
+i would like to do some things in phoenix,travel_suggestion,9
+tell me some things to do in phoenix,travel_suggestion,8
+what are some fun silly things to do in new jersey,travel_suggestion,11
+what are some cool tourist attractions in england,travel_suggestion,8
+what are some fun local experiences in canada,travel_suggestion,8
+what are some fun tourist things to do in mumbai,travel_suggestion,10
+what are some fun cheap activities to do in colorado,travel_suggestion,10
+give me my reminders,reminder,4
+what were the things that i wanted to remember,reminder,9
+what were you supposed to remind me of,reminder,8
+my list of reminders contains what,reminder,6
+what did i want to remember,reminder,6
+what did i ask you to remind me of,reminder,9
+read my reminder list,reminder,4
+is my meeting with frank on my list of reminders,reminder,10
+list my reminders,reminder,3
+what stuff am i trying to remember,reminder,7
+what are my reminders,reminder,4
+did i tell you to remind me about laundry,reminder,9
+"on my reminders list, is there an item called conference call",reminder,11
+what items did i want to remember,reminder,7
+what's on my list of things to remember,reminder,8
+what kinds of things are you supposed to remind me of,reminder,11
+is grocery shopping on my reminders list,reminder,7
+i want to know my reminders,reminder,6
+read my list of reminders,reminder,5
+can you tell me the to do's on my reminder list,reminder,11
+please go though the bullet points on my reminder list,reminder,10
+what are all the things on my reminder list,reminder,9
+"i would like to hear the reminders that i listed on my things to remember list, please",reminder,17
+what were the things i want to recall,reminder,8
+can you please remind me of the items that i made note of to not forget,reminder,16
+refresh my memory about what items i want to remember,reminder,10
+remind me of the items on my list of things to remember,reminder,12
+"i'd like to just confirm all of the reminders currently on my list of reminders, please",reminder,16
+please play my list of reminders,reminder,6
+"""which things are wanted to remember",reminder,6
+do i have my nephew's birthday marked for november 10th,calendar,10
+do i have any appoints set for my calendar april 3rd,calendar,11
+did i set march 10th as my doctor's appointment,calendar,9
+do i have any appointments on my calendar march 22nd,calendar,10
+did i set a day on my calendar for voting in the next election,calendar,14
+did i mark the mechanic's appointment on my calendar,calendar,9
+do i have any calendars set for may 12th,calendar,9
+what day did i set on my calendar for the first day of school,calendar,14
+is anything on my calendar for june 22nd,calendar,8
+what do i have going on on my calendar for march 18th,calendar,12
+is my meeting with frank on my calendar,calendar,8
+what do i have planned for 3/5,calendar,7
+have i gotten around to adding the bike ride to my calendar yet,calendar,13
+what events do i have going on on march 11th,calendar,10
+i can't remember if i added the fun run to my calendar yet; did i,calendar,15
+have i added my doctor's appointment to my calendar,calendar,9
+do i have calendar events on march 19th,calendar,8
+read my calendar for march 7th,calendar,6
+do i have any items on my calendar for march 21st,calendar,11
+do i have any calendar entries for march 8th,calendar,9
+tell me what's on my calendar for march 22nd,calendar,9
+is the marathon on friday added to my calendar,calendar,9
+what's on my calendar for march 20th,calendar,7
+what's on my calendar on march 10th,calendar,7
+"check my calendar for me, please",calendar,6
+is event on my calendar,calendar,5
+retrieve events on my calendar,calendar,5
+is bowling on my calendar,calendar,5
+on tuesday you are supposed to have a meeting,calendar,9
+you have yo go to school on calendar,calendar,8
+thank you ever so much for that!,thank_you,7
+you’re the best thanks so much!,thank_you,6
+thanks for helping,thank_you,3
+i am grateful for the help,thank_you,6
+thank you for the heip,thank_you,5
+i apprecaite the help from you,thank_you,6
+thanks that was really helpful,thank_you,5
+thank you for your time and trying to help,thank_you,9
+thank you for your assistance,thank_you,5
+thanks for all your help,thank_you,5
+thanks for trying,thank_you,3
+many thank,thank_you,2
+thanks a million,thank_you,3
+thank a bunch,thank_you,3
+i appeciate it,thank_you,3
+i would like to thank you ai,thank_you,7
+"ai you have given me so much information, thank you",thank_you,10
+thanks so much ai,thank_you,4
+thank you ai for everything you do,thank_you,7
+"ai is a helpful item to have in my home, thank you",thank_you,12
+thank you very much,thank_you,4
+"that answer was very helpful, thanks",thank_you,6
+"great, thanks!",thank_you,2
+thanks for your help!,thank_you,4
+thanks so much,thank_you,3
+thanks for that answer,thank_you,4
+thank you for that reply,thank_you,5
+thanks for the reply,thank_you,4
+thanks for that response,thank_you,4
+thank you for that response,thank_you,5
+i want to set an alarm,alarm,6
+set an alarm for 6 am tomorrow,alarm,7
+set an alarm for 8 tomorrow,alarm,6
+please set an alarm,alarm,4
+i'd love to set an alarm,alarm,6
+i would like to have an alarm set for me,alarm,10
+i want an alarm set,alarm,5
+i need to set an alarm,alarm,6
+set an alarm for ten tomorrow,alarm,6
+set an alarm for 11 tomorrow,alarm,6
+i want an alarm for 6 am,alarm,7
+set an alarm for me,alarm,5
+i wanna have an alarm,alarm,5
+i need an alarm set now,alarm,6
+set an alarm for 9 tomorrow,alarm,6
+don't forget to set an alarm for noon,alarm,8
+can you set the alarm for noon,alarm,7
+i need to up by noon,alarm,6
+can you wake me up at noon,alarm,7
+set alarm for noon,alarm,4
+wake me up with an alarm at 6am,alarm,8
+help me wake up with an alarm at 5:30am,alarm,9
+set an alarm to wake me up at 5:30am,alarm,9
+set an alarm for 5am,alarm,5
+please set the alarm,alarm,4
+please make sure the alarm is set,alarm,7
+could you set the alarm,alarm,5
+set the alarm now,alarm,4
+can you set an alarm,alarm,5
+i need an alarm,alarm,4
+good speaking to you,goodbye,4
+it was really awesome to talk to you,goodbye,8
+it was great to speak with you,goodbye,7
+it was great to talk to you,goodbye,7
+bye bye then,goodbye,3
+it was very good to talk to you,goodbye,8
+good bye then,goodbye,3
+bye,goodbye,1
+regards,goodbye,1
+catch you later,goodbye,3
+"great talk, thanks",goodbye,3
+later,goodbye,1
+goodbye,goodbye,1
+see you later,goodbye,3
+"enjoy your day, goodbye",goodbye,4
+thank you goodbye,goodbye,3
+"have a good day, bye",goodbye,5
+that will be all have a nice day!,goodbye,8
+"i enjoyed talking to you, bye",goodbye,6
+it was great talking to you,goodbye,6
+nice seeing you bye,goodbye,4
+it was nice to chat,goodbye,5
+it was a pleasure talking to you,goodbye,7
+ok good chatting goodbye,goodbye,4
+thanks bye bye!,goodbye,3
+"that's all i need, i'm going now",goodbye,7
+"talk to you soon, bye!",goodbye,5
+"thanks for your help, goodbye!",goodbye,5
+good bye,goodbye,2
+signing off,goodbye,2
+i really need you to find me a hotel with good reviews in phoenix,book_hotel,14
+i wanna book a place to stay in phoenix from the 5th to the 9th of march,book_hotel,17
+i wanna find a hotel with good reviews in phoenix,book_hotel,10
+i want a hotel in phoenix near chase field from january 4th to the 8th,book_hotel,15
+i would like to book a place to stay in phoenix from the 5th to the 9th of march,book_hotel,19
+i need a hotel in phoenix near chase field from january 4th to the 8th,book_hotel,15
+i need a hotel room that is big enough for eleven people from march 10th to the 15th in phoenix,book_hotel,20
+i must get a hotel in phoenix near chase field from january 4th to the 8th,book_hotel,16
+go ahead and find me a hotel with good reviews in phoenix,book_hotel,12
+find me a hotel with good reviews in phoenix,book_hotel,9
+i need you to find me a hotel with good reviews in phoenix,book_hotel,13
+get me a hotel in phoenix near chase field from january 4th to the 8th,book_hotel,15
+i need to get a hotel in phoenix near chase field from january 4th to the 8th,book_hotel,17
+please book me a place to stay in phoenix from the 5th to the 9th of march,book_hotel,17
+i need to book a place to stay in phoenix from the 5th to the 9th of march,book_hotel,18
+i really gotta book a place to stay in phoenix from the 5th to the 9th of march,book_hotel,18
+i need to get a hotel room that is big enough for eleven people from march 10th to the 15th in phoenix,book_hotel,22
+can you find me a reputable hotel in honolulu,book_hotel,9
+"i want a hotel with good review in honolulu, can you find one",book_hotel,13
+find for me a hotel with great reviews in ho chi minh,book_hotel,12
+i need your help to find a good reviewed hotel in washington,book_hotel,12
+can you find me a good reviewed hotel in japan,book_hotel,10
+i need a hotel between january 1st through 3rd in jacksonville near the stadium,book_hotel,14
+find me a place to stay in jacksonville near the stadium from january 1st through 3rd,book_hotel,16
+book me a hotel in jacksonville near the stadium from january 1st to 3rd,book_hotel,14
+id like a room in jacksonville near the stadium between january 1st to 3rd,book_hotel,14
+find me a room near the jacksonville stadium between january 1st through january 3rd,book_hotel,14
+get me a hotel room big enough for 4 people from may 3 to may 5 in boston,book_hotel,18
+i'm travelling to boston on march 2 until march 4 please make a hotel reservation for me,book_hotel,17
+i need a hotel room for 4 people from may 3 to may 5 in boston,book_hotel,16
+what is the weather,weather,4
+current weather,weather,2
+tell me the weather,weather,4
+what's the weather like today,weather,5
+what is the weather like,weather,5
+show me what the weather is like,weather,7
+let's take a look at the weather,weather,7
+how is the weather looking in seattle,weather,7
+how's the weather in seattle,weather,5
+what is the state of the weather in seattle,weather,9
+what is the weather forecast looking like for seattle,weather,9
+what are the weather conditions like in seattle,weather,8
+what is the weather doing now,weather,6
+what kind of weather can i expect now,weather,8
+tell me what the weather is looking like,weather,8
+how is the weather,weather,4
+can you tell me the weather forecast,weather,7
+could you tell me what the weather is in austin,weather,10
+what is the weather doing in austin,weather,7
+what about the weather in austin,weather,6
+how is the weather in austin,weather,6
+what is happening with the weather in austin,weather,8
+how is that weather,weather,4
+how does the weather feel,weather,5
+need to know the weather now,weather,6
+give weather update now,weather,4
+want to know the weather,weather,5
+tell me the weather for today,weather,6
+what is the current weather like,weather,6
+las vegas weather today,weather,4
+how do i get downtown by foot,directions,7
+how do i get to the subway by foot,directions,9
+how do i get to the train by foot,directions,9
+how do i get to central park by foot,directions,9
+how do i get to the airport by foot,directions,9
+where is the nearest wal mart,directions,6
+i want directions to phoenix,directions,5
+i must understand the nearest gas station to glendale,directions,9
+i need some directions to phoenix,directions,6
+give me directions to phoenix,directions,5
+i must know the closest gas station to glendale,directions,9
+where is the nearest fry's,directions,5
+where is the nearest papa john's,directions,6
+i would love to know the closest gas station to glendale,directions,11
+get me directions to phoenix,directions,5
+where is the nearest k mart,directions,6
+where is the nearest circuit city,directions,6
+let me know the nearest gas station to glendale,directions,9
+where is the closest gas station to glendale,directions,8
+where is the nearest movie theater to time' square,directions,9
+where is the closest bathroom to the statue of liberty,directions,10
+where is the closest mcdonald's to foxwoods casino,directions,8
+where is the nearest marijuana dispensary to kentucky fried chicken,directions,10
+where is the closest hospital to madison square garden,directions,9
+where is the closest pharmacy,directions,5
+show me the nearest gas station,directions,6
+which hospital is nearest to me,directions,6
+i need to know where the hospital closest to me is,directions,11
+where is the nearest arco gas station to macdonalds,directions,9
+find the closest cvs near galleria mall,directions,7
+how are you doing,greeting,4
+are you okay,greeting,3
+what are you feeling today,greeting,5
+is everything ok today,greeting,4
+are you doing alright,greeting,4
+"hello, how's your day",greeting,4
+"hey there, how are you today",greeting,6
+"hello, how is it going",greeting,5
+"hi there, how are you doing",greeting,6
+"hey, how are you",greeting,4
+"hey, what's up",greeting,3
+"hello, how are you doing",greeting,5
+"hi, how are you",greeting,4
+"hi, how are you today",greeting,5
+"hello, how are things",greeting,4
+hey there,greeting,2
+"hey, what's new",greeting,3
+it is good to see you,greeting,6
+i'd like to know how you are doing,greeting,8
+hello there,greeting,2
+tell me how you are doing,greeting,6
+"hello there, good morning",greeting,4
+let me know how you are doing,greeting,7
+well hi there,greeting,3
+i want to know how you are doing,greeting,8
+i need to know how you are doing today,greeting,9
+hello there ai,greeting,3
+will you tell me how the ai is doing,greeting,9
+would you tell me how the ai is doing,greeting,9
+hola!,greeting,1
+i would like to hear something funny,tell_joke,7
+do you have any monkey jokes,tell_joke,6
+know any dad jokes,tell_joke,4
+tell me a dog joke,tell_joke,5
+heard any good jokes,tell_joke,4
+i want to hear a joke about elephants,tell_joke,8
+i'd like to hear a lawyer joke,tell_joke,7
+tell me a blonde joke,tell_joke,5
+do you know any dad jokes,tell_joke,6
+tell me a joke about elephants,tell_joke,6
+tell me a joke about the subject of sailing,tell_joke,9
+give me a joke about water,tell_joke,6
+give me a joke about the topic of television,tell_joke,9
+give me a joke about the subject of bugs,tell_joke,9
+tell me a joke about the topic of mice,tell_joke,9
+i would like to hear a joke,tell_joke,7
+will you tell me a joke,tell_joke,6
+let's hear a joke!,tell_joke,4
+"i could use a laugh, got any jokes",tell_joke,8
+can you tell me something funny about science,tell_joke,8
+can you share something funny about traveling,tell_joke,7
+i want to hear your best joke,tell_joke,7
+tell me a good joke,tell_joke,5
+tell me something funny about horses,tell_joke,6
+i want to hear something funny about history,tell_joke,8
+can you share a humorous joke with me,tell_joke,8
+i want to hear something funny about politicsi,tell_joke,8
+let's hear a joke from you please,tell_joke,7
+tell me something funny about the middle ages,tell_joke,8
+do you know any jokes,tell_joke,5

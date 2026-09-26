@@ -1,0 +1,8 @@
+{
+    "epochs_run": 16,
+    "best_epoch": 11,
+    "train_loss": 0.03150095045566559,
+    "train_accuracy": 0.9938889145851135,
+    "val_loss": 0.2072639912366867,
+    "val_accuracy": 0.9416666626930237
+}
